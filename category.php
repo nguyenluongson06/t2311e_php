@@ -5,24 +5,22 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <?php include_once("html/styles.php");?>
-    </head>
-
-    <body>
-        <header>
-        </header>
-        <?php include_once("html/nav.php");?>
-        <main class="main">
-            <div class="container">
-                <h2><?php echo $category["name"];?></h2>
-                <div class="row">
-
-                    <?php foreach($category["products"] as $item):?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <?php include_once("html/styles.php");?>
+</head>
+<body>
+    <header>
+    </header>
+    <?php include_once("html/nav.php");?>
+    <main class="main">
+        <div class="container">
+            <h2><?php echo $category["name"];?></h2>
+            <div class="row">
+           
+                <?php foreach($category["products"] as $item):?>
                     <div class="col-3">
                         <div class="card" style="width: 18rem;">
                             <img src="<?php echo $item["thumbnail"] ?>" class="card-img-top" alt="...">
@@ -34,12 +32,11 @@
                             </div>
                         </div>
                     </div>
-                    <?php endforeach;?>
-
-                </div>
+                <?php endforeach;?>    
+        
             </div>
-
-        </main>
-    </body>
-
+        </div>
+    
+    </main>
+</body>
 </html>
